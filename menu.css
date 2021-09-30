@@ -1,0 +1,159 @@
+/* LIZARRAGA TAVARES FRIDA SOFIA 4J*/
+/* Importamos el tipo de letra que utilizaremos*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		/*quitamos el margen de la pagina */
+		margin: 0;
+		/*quitamos el relleno de la pagina  */
+		padding: 0;
+		/*para tener el control de las cajas que utilizaremos  */
+		box-sizing: border-box;
+		/* tipo de letra*/
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	/*iniciamos con la etiqueta para el cuerpo de la pagina */
+	body{
+		/*traemos la imagen del fondo desde internet por medio de un likn */
+		background: url(https://a-static.besthdwallpaper.com/reddish-sky-papel-pintado-1930_L.jpg);
+		/* editamos y ajustamos la imagen para que se adapte a el fondo*/
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+	}
+
+	/*Estilos para el encabezado*/
+	.header{
+		/* establecemos lo ancho */
+		width: 100%;
+		/* establecemos lo alto*/
+		height: 100px;
+		/* determinamos el tipo de posicion */
+		position: fixed;
+		/* especificamos la posicion arriba  */
+		top: 0;
+		/* especificamos la posicion a la izquierda*/
+		left: 0;
+	}
+	/* Estilos de la clase contenedor*/
+	.container{
+		/* establecemos el ancho*/
+		width: 90%;
+		/* determinamos el ancho maximo del elemento*/
+		max-width: 1200px;
+		/*establecemos que los margenes sean automaticos de los 4 lados*/
+		margin: auto;
+	}
+	/* Estilos de el contenedor, el boton de menu y el logo-posicion*/
+	.container .btn-menu, .logo{
+		/*esta propiedad ubica a el elemento a la izquierda  */
+		float: left;
+		/*determinamos a que altura se ubica el elemento elemento */
+		line-height:100px;
+	}
+	/* Estilos de el contenedor y de el boton de menu-diseño*/
+	.container .btn-menu label{
+		/* establecemos el color(blanco)*/
+		color: #fff;
+		/*el tamaño de la letra */
+		font-size: 25px;
+	}
+	/*Estilos del logo del menu */
+	.logo h1{
+		/* establecemos el color (blanco)*/
+		color: #fff;
+		/*determinamos el ancho */
+		font-weight: 400;
+		/*tamaño del logo */
+		font-size: 22px;
+		/*el tamaño del margen de la izquierda */
+		margin-left: 10px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		/* esta pripiedad indica si es visible o no el elemento*/
+		display: none;
+	}
+	/* Estilos de la clase contenedor del menu*/
+	.container-menu{
+		/* determinamos el tipo de posicion (en este caso absoluta) */
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		/* degtermianmos las dimenciones ancho*/
+		width: 100%;
+		/* lo alto*/
+		height: 100vh;
+		/*establesemos que se encuentre pegado a la oarte de arriba (top) e izquierda (left) */
+		top: 0;left: 0;
+		/* determinamos el tiempo de la transicion con la que aparecera nuestro menu*/
+		transition: all 500ms ease;
+		/*detrminamso la opacidad  */
+		opacity: 0;
+		/* establecemos la visibilidad */
+		visibility: hidden;
+	}
+	/*Una vez activado el voton del menu, el menu se pueda hacer visible */
+	#btn-menu:checked ~ .container-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	/* Estilos del contenedor de nuestro menu*/
+	.cont-menu{
+		/* determinamos el ancho*/
+		width: 100%;
+		/* estebleeos lo maximo de ancho del elementp*/
+		max-width: 250px;
+		/* el color del fondo  */
+		background: #1c1c1c;
+		/*alto del contenedor del munu  */
+		height: 100vh;
+		/* establecemos le tipo de posicion en est caso relativa*/
+		position: relative;
+		/* determinamos el tiempo de la transicion */
+		transition: all 500ms ease;
+		/* hacemos que se esconda el menu en la izquierda*/
+		transform: translateX(-100%);
+	}
+	/*Hcemos que una vez activado el menu pueda volver a su posicion original */
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	/* Estilos de las etiquetas a*/
+	.cont-menu nav a{
+		/* hacemos que tenga un bloque o espacio por etiqueta*/
+		display: block;
+		/* quitamos las decoracion del texto que vienen ppor default*/
+		text-decoration: none;
+		/*establecemos la separacion entre opciones o etiqueta */
+		padding: 20px;
+		/* determinamos el color */
+		color: #c7c7c7;
+		/*determinamos el tamaño del borde a la izquierda */
+		border-left: 5px solid transparent;
+		/* derminamos el tiempo de transicion*/
+		transition: all 400ms ease;
+	}
+	/* Estilos de la transicion al momneto de pasar el curson por el enlce  */
+	.cont-menu nav a:hover{
+		/*especifocamos sus propiedades */
+		border-left: 5px solid #c7c7c7;
+		background: #1f1f1f;
+	}
+	/*Estilos de la etiqueta label (la equis) */
+	.cont-menu label{
+		/* determinamos el tipo de posicion (absoluta )*/
+		position: absolute;
+		/* establecemos posicion a la derecha (rigth) y arriba(top)*/
+		right: 5px;
+		top: 10px;
+		/* determinamos le color*/
+		color: #fff;
+		/* modificamos cursor a unpoiter que es la mano ara seleccionar*/
+		cursor: pointer;
+		/* determinamos el tamaño*/
+		font-size: 18px;
+	}

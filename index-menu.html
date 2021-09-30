@@ -1,0 +1,57 @@
+<!--LIZARRAGA TAVARES FRIDA SOFIA 4J-->
+<!DOCTYPE html>
+<!-- determina que este archivo es un html	-->
+<html lang="es">
+
+<!-- Inicia o abre la cabeza del documento	-->
+<head>
+    <!-- con este atributo nos aseguramos que el navegador conocerá la codificación-->
+	<meta charset="UTF-8">
+	<!-- Con esta etiqueta especificamos el titulo que parecera en el navegador	-->
+	<title>Menù vertical</title>
+	<!-- llamamos a nuestra hoja css externa para el estilo-->
+	<link rel="stylesheet" href="menu.css" type="text/css">
+<!--cerramos la cabeza de la pagina -->	
+</head>
+<!--Iniciamos con el cuerpo de nuestra pagina -->
+<body>
+    <!-- este atributo agregamos elementos a el encabezado de la pagina  -->
+	<header class="header">
+		<!--Iniciamos con el cuerpo de nuestra pagina -->
+		<div class="container">
+			<!--  agregamos el logo y le adjudicamos a una clase-->
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+		   <!-- agregamos el texto al ando del logo par que se sepa que es necesario presionarlo para que apresaca el menu -->
+			<div class="logo">
+				<h1>Menù</h1>
+			</div>
+		</div>
+		<!-- Cerramos el encabezado de la pagina -->
+	</header>
+
+<!--agregamos el menu que en este caso sera una caja de activacion (se activara por medio de un boton) -->
+<input type="checkbox" id="btn-menu">
+<!-- iniciamos un contenedor con una clase -->
+<div class="container-menu">
+<!-- hacemos la divisuion del contenedor del menu -->
+	<div class="cont-menu">
+		<!-- iniciamos la lista de las diversas opciones del menu  -->
+		<nav>
+			<!-- agregamos las opciones del menu por medio de enlaces (que deverian de ser enlaces a otras paginas)-->
+		<li><a href="#">Opcion 1</a></li>
+		<li><a href="#">Opcion 2</a></li>
+		<li><a href="#">Opcion 3</a></li>
+		<li><a href="#">Opcion 4</a></li>
+		<li><a href="#">Opcion 5</a></li>
+		<li><a href="#">Opcion 6</a></li>
+		</nav>
+		<!-- como el menu aparece por medio de una caja de activacion (o sea presionando un boton) tenemos que agregar una equis para eliminarlo de la pantalla-->
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+<!-- cerramos el cuerpo de la pagina-->
+</body>
+</html>
+<!-- cerramos el documento html-->
